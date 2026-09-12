@@ -1,7 +1,0 @@
-{
-  "learning_rate": 0.001,
-  "gamma": 0.95,
-  "lambda_battery_a": 1.0,
-  "gate_k": 0.1,
-  "gate_b_mid": 40.0
-}
