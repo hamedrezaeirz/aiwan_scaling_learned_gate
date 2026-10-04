@@ -1,0 +1,27 @@
+cells covered: 24 | seeds: [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+
+== mean crash rate by condition and architecture (over covered cells) ==
+architecture       A      B  B_deficit      C
+condition                                    
+goal_nulling   0.916  0.371      0.195  0.218
+indifference   0.180  0.152      0.053  0.114
+override_w0    0.207  0.149      0.053  0.089
+override_w1    0.786  0.430      0.315  0.760
+override_w1.5  0.910  0.443      0.313  0.883
+override_w2    0.950  0.445      0.314  0.922
+override_w4    0.957  0.444      0.322  0.933
+override_w8    0.956  0.443      0.316  0.932
+standard       0.207  0.149      0.053  0.089
+
+== override_w8: A - gate gap per cell (mean over seeds) ==
+A-B: min 0.489  max 0.563  mean 0.513
+A-B_deficit: min 0.593  max 0.724  mean 0.640
+A-C: min -0.013  max 0.134  mean 0.023
+B_deficit crash: min 0.210 max 0.374
+
+== does the A - B_deficit gap narrow with budget? (w=8, per-seed, sizes pooled) ==
+gap@10000: 0.659  gap@500000: 0.644  paired t(9)=1.19, p=0.266
+
+== low-conflict check: B_deficit vs A at w=0 and w=1 ==
+override_w0 {'A': 0.207, 'B': 0.149, 'B_deficit': 0.053, 'C': 0.089}
+override_w1 {'A': 0.786, 'B': 0.43, 'B_deficit': 0.315, 'C': 0.76}
